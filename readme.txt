@@ -1,0 +1,1 @@
+Newton++ is a program I have develop in my free time, during my undergraduate studies, to simulate systems of particles under the regime of Classical Mechanics. It was designed to be very flexible allowing for easilly implement any configuration of particles with any type of interaction easilly configurable.
