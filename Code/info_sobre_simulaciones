@@ -1,0 +1,93 @@
+Dos masas "perfectamente rígidas"
+
+2016_12_24_10_47_52_NO_BORRAR
+
+#define K1 0
+#define K2 5e14
+#define D1 0
+#define D2 0 // 5e15
+
+#define N_PARTICLES_IN_MOON (2*1) // Must be an even number! This is the number of particles that make up the moon.
+#define MOON_SPIN_PERIOD (60*60*24*27.322*-1) // In seconds, taken from https://en.wikipedia.org/wiki/Orbit_of_the_Moon
+
+#define N_EXPORT_POINTS 1000
+#define SIMULATION_TIME (60*60*24*27.33*50)
+#define TIME_TO_START_SAVING_DATA (SIMULATION_TIME*0.9)
+#define TIME_STEP 1
+
+---------------------------------------------------------------------------------
+Dos masas "perfectamente rígidas"
+
+2016_12_24_13_12_13_NO_BORRAR
+
+#define K1 0
+#define K2 5E14
+#define D1 0
+#define D2 0
+
+#define N_PARTICLES_IN_MOON (2*1) // Must be an even number! This is the number of particles that make up the moon.
+#define MOON_SPIN_PERIOD (60*60*24*27.322*1) // In seconds, taken from https://en.wikipedia.org/wiki/Orbit_of_the_Moon
+
+#define N_EXPORT_POINTS 2000
+#define SIMULATION_TIME (60*60*24*27.33*30)
+#define TIME_TO_START_SAVING_DATA (SIMULATION_TIME*0)
+#define TIME_STEP 1
+
+---------------------------------------------------------------------------------
+Dos masas elásticas y con amortiguador que se acoplan de a poco.
+
+2016_12_24_15_30_55_NO_BORRAR
+
+#define K1 3e12
+#define K2 2e12
+#define D1 0
+#define D2 5e15
+
+#define N_PARTICLES_IN_MOON (2*1) // Must be an even number! This is the number of particles that make up the moon.
+#define MOON_SPIN_PERIOD (60*60*24*27.322*1000) // In seconds, taken from https://en.wikipedia.org/wiki/Orbit_of_the_Moon
+
+#define N_EXPORT_POINTS 1000
+#define SIMULATION_TIME (60*60*24*27.33*30)
+#define TIME_TO_START_SAVING_DATA (SIMULATION_TIME*0)
+#define TIME_STEP 100
+
+
+---------------------------------------------------------------------------------
+
+Con lo siguiente se logra el acoplamiento usando 4 masas:
+#define K1 5e14
+#define K2 1.6e11
+#define D1 0
+#define D2 5e15
+
+#define N_PARTICLES_IN_MOON (2*2) // Must be an even number! This is the number of particles that make up the moon.
+#define MOON_SPIN_PERIOD (60*60*24*27.322*1000) // In seconds, taken from https://en.wikipedia.org/wiki/Orbit_of_the_Moon
+
+---------------------------------------------------------------------------------
+Con dos partículas y estos valores:
+	#define K1 0
+	#define K2 8e11
+	#define D1 0
+	#define D2 5e16
+se acopla en seguida la órbita.
+
+-----------------------------------------------------
+
+Con dos partículas y estos valores:
+	#define K1 3e12
+	#define K2 2e12
+	#define D1 0
+	#define D2 5e15
+también es re copado.
+
+-----------------------------------------------------
+
+Con esto se pueden ver las mareas:
+#define K1 8e12
+#define K2 8e10
+#define D1 9e16
+#define D2 9e15
+
+#define N_PARTICLES_IN_MOON (2*6) // Must be an even number! This is the number of particles that make up the moon.
+
+-----------------------------------------------------

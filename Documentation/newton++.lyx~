@@ -1,0 +1,242 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+% Esta linea es un comentario
+%\date{}  % Sacamos la fecha del principio
+\hyphenation{dis-po-si-ti-vo re-gis-tro di-se-ña-do con-si-de-rar-se} %  Indicamos cómo separar las palabras. Cada palabra se separa con un espacio.
+% Configuracion de epigrafes ------------------
+%\usepackage[footnotesize]{caption}
+%\captionsetup{width=0.8\textwidth}
+%Modificaciones de leyendas en figuras
+\usepackage{caption}
+\captionsetup[figure]{margin=40pt,font=normalsize,labelfont=bf} 
+\captionsetup[table]{margin=40pt,font=normalsize,labelfont=bf} 
+% ---------------------------------------------------------------
+\usepackage{lmodern} % Parece que mejora el aspecto de las fuentes vectoriales o algo asi
+\usepackage[T1]{fontenc} % Utiliza un cifrado de 8 bits para los caracteres permitiendo usar los acentuados sin problemas
+\usepackage{float}
+\usepackage{units}
+\usepackage{graphicx}
+\usepackage{esint}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+
+%\renewcommand{\arraystretch}{2.5} % Mejora el espaciamiento vertical de las matrices, para que las fracciones no queden tan pegadas
+
+%\usepackage{placeins} % Es para que los flotantes no se vallan a cualquier lado
+% Para usar "placeins" colocar codigo TeX en forma de \FloatBarrier y los flotantes no pasan de ahi
+
+% TITULOS DE COLORES ----------------------------------------------------------------
+% DEFINICIÓN DE COLORES -------------
+\usepackage{xcolor}
+%\definecolor{sec_color}{rgb}{0,0,1}
+%\definecolor{subsec_color}{rgb}{1,0,0}
+%\definecolor{subsubsec_color}{rgb}{0, .6, .8}
+\definecolor{my_gray}{RGB}{200, 200, 200}
+
+%\usepackage{sectsty}
+%\sectionfont{\color{sec_color}}
+%\subsectionfont{\color{subsec_color}}
+%\subsubsectionfont{\color{subsubsec_color}}
+% ---------------------------------------------------------------------------------------------
+\end_preamble
+\use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "/home/alf/Dropbox/macros2015.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El programa 
+\emph on
+Newton++
+\emph default
+ es un programa pensado para simular sistemas de partículas.
+ En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "FIG. Diagrama general del programa"
+
+\end_inset
+
+ hay un esquema de la estructura de datos del programa.
+ En el 
+\family typewriter
+main
+\family default
+ el usuario crea las partículas y las fuerzas, cada una con sus propiedades,
+ y luego crea un sistema de partículas en el cual añade las partículas y
+ sus interacciones, todo a través de los métodos del sistema de partículas
+ (está todo automatizado).
+ Una vez que ha añadido todo entonces se realiza la simulación.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename plano.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama general del programa 
+\emph on
+Newton++
+\emph default
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "FIG. Diagrama general del programa"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No tengo tiempo para documentar mejor ahora, ver los 
+\family typewriter
+main
+\family default
+'s de ejemplo.
+\end_layout
+
+\begin_layout Subsection*
+Potencial de Lennard-Jones 
+\begin_inset Quotes eld
+\end_inset
+
+rápido
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V\PARENTESIS r=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

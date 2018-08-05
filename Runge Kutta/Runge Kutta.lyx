@@ -1,0 +1,558 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+% Esta linea es un comentario
+%\date{}  % Sacamos la fecha del principio
+\hyphenation{dis-po-si-ti-vo re-gis-tro di-se-ña-do con-si-de-rar-se} %  Indicamos cómo separar las palabras. Cada palabra se separa con un espacio.
+% Configuracion de epigrafes ------------------
+%\usepackage[footnotesize]{caption}
+%\captionsetup{width=0.8\textwidth}
+%Modificaciones de leyendas en figuras
+\usepackage{caption}
+\captionsetup[figure]{margin=40pt,font=normalsize,labelfont=bf} 
+\captionsetup[table]{margin=40pt,font=normalsize,labelfont=bf} 
+% ---------------------------------------------------------------
+\usepackage{lmodern} % Parece que mejora el aspecto de las fuentes vectoriales o algo asi
+\usepackage[T1]{fontenc} % Utiliza un cifrado de 8 bits para los caracteres permitiendo usar los acentuados sin problemas
+\usepackage{float}
+\usepackage{units}
+\usepackage{graphicx}
+\usepackage{esint}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+
+%\renewcommand{\arraystretch}{2.5} % Mejora el espaciamiento vertical de las matrices, para que las fracciones no queden tan pegadas
+
+%\usepackage{placeins} % Es para que los flotantes no se vallan a cualquier lado
+% Para usar "placeins" colocar codigo TeX en forma de \FloatBarrier y los flotantes no pasan de ahi
+
+% TITULOS DE COLORES ----------------------------------------------------------------
+% DEFINICIÓN DE COLORES -------------
+\usepackage{xcolor}
+%\definecolor{sec_color}{rgb}{0,0,1}
+%\definecolor{subsec_color}{rgb}{1,0,0}
+%\definecolor{subsubsec_color}{rgb}{0, .6, .8}
+\definecolor{my_gray}{RGB}{200, 200, 200}
+
+%\usepackage{sectsty}
+%\sectionfont{\color{sec_color}}
+%\subsectionfont{\color{subsec_color}}
+%\subsubsectionfont{\color{subsubsec_color}}
+% ---------------------------------------------------------------------------------------------
+\end_preamble
+\use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "/home/alf/Dropbox/macros2015.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ARRAY}[1]{\overline{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\FF}{\mathscr{F}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Planteo del problema
+\end_layout
+
+\begin_layout Standard
+Para una partícula cuya posición está dada por el vector 
+\begin_inset Formula $\VECTOR r$
+\end_inset
+
+ entonces las ecuaciones de Newton son 
+\begin_inset Formula 
+\begin{equation}
+\GRISCLARO{\text{Newton}\rightarrow}\LKEY{\begin{aligned} & \VECTOR r=\VECTOR r\PARENTESIS t\\
+ & \dot{\VECTOR r}\PARENTESIS t=\frac{d\VECTOR r}{dt}\PARENTESIS t\\
+ & \ddot{\VECTOR r}\PARENTESIS t=\frac{\VECTOR F\PARENTESIS{\VECTOR r,t}}{m}
+\end{aligned}
+}\label{EQ. Newtons eqs}
+\end{equation}
+
+\end_inset
+
+ donde 
+\begin_inset Formula $\VECTOR F$
+\end_inset
+
+ es la fuerza que siente la partícula producto de sus interacciones.
+ El problema queda completamente definido cuando se especifican las condiciones
+ iniciales 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\GRISCLARO{\text{Condiciones iniciales}\rightarrow}\LKEY{\begin{aligned} & \VECTOR r\PARENTESIS{t=0}=\VECTOR r_{0}\\
+ & \dot{\VECTOR r}\PARENTESIS{t=0}=\dot{\VECTOR r}_{0}
+\end{aligned}
+}
+\]
+
+\end_inset
+
+ y la función 
+\begin_inset Formula $\VECTOR F\PARENTESIS t$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Para resolverlo en forma numérica se propone una discretización de la siguiente
+ forma 
+\begin_inset Formula 
+\[
+\GRISCLARO{\text{Discretización}\rightarrow}\LKEY{\begin{aligned} & \VECTOR r\PARENTESIS{t=n\Delta_{t}}\DEF\VECTOR r_{n}\\
+ & \dot{\VECTOR r}\PARENTESIS{t=n\Delta_{t}}\DEF\dot{\VECTOR r}_{n}
+\end{aligned}
+}
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $n$
+\end_inset
+
+ es el 
+\begin_inset Quotes eld
+\end_inset
+
+número de paso
+\begin_inset Quotes erd
+\end_inset
+
+ y 
+\begin_inset Formula $\Delta_{t}$
+\end_inset
+
+ el paso temporal (se asume constante en 
+\begin_inset Formula $n$
+\end_inset
+
+) y la obtención de 
+\begin_inset Formula $\VECTOR r_{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $\dot{\VECTOR r}_{n}$
+\end_inset
+
+ será a partir de un proceso iterativo 
+\begin_inset Formula 
+\[
+\GRISCLARO{\text{Iteración}\rightarrow}\LKEY{\begin{aligned} & \VECTOR r_{n+1}=\text{algo que depende de }\VECTOR r_{n}\\
+ & \dot{\VECTOR r}_{n+1}=\text{algo que depende de }\dot{\VECTOR r}_{n}
+\end{aligned}
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Método de Euler
+\end_layout
+
+\begin_layout Standard
+El método de Euler (el más básico y directo) consiste en realizar la iteración
+ del siguiente modo 
+\begin_inset Formula 
+\[
+\GRISCLARO{\text{Euler}\rightarrow}\LKEY{\begin{aligned} & \VECTOR r_{n+1}=\VECTOR r_{n}+\dot{\VECTOR r}_{n}\Delta_{t}+\frac{1}{2}\ddot{\VECTOR r}_{n}\Delta_{t}^{2}\\
+ & \dot{\VECTOR r}_{n+1}=\dot{\VECTOR r}_{n}+\ddot{\VECTOR r}_{n}\Delta_{t}
+\end{aligned}
+}
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $\ddot{\VECTOR r}\PARENTESIS t=\frac{\VECTOR F\PARENTESIS t}{m}$
+\end_inset
+
+ de acuerdo con las ecuaciones de Newton.
+ 
+\bar under
+Esto es lo que está implementado en el código
+\bar default
+.
+\end_layout
+
+\begin_layout Section
+Método RK4
+\end_layout
+
+\begin_layout Standard
+El método Runge-Kutta 4
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Ver 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://es.wikipedia.org/wiki/Método_de_Runge-Kutta
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ se plantea para la resolución de ecuaciones de la forma 
+\begin_inset Formula $\frac{dx}{dt}=f\PARENTESIS{x,t}$
+\end_inset
+
+ con 
+\begin_inset Formula $x\PARENTESIS{t_{0}}=x_{0}$
+\end_inset
+
+.
+ Entonces es necesario plantear las ecuaciones de Newton 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "EQ. Newtons eqs"
+
+\end_inset
+
+ con este formato.
+ Para ello considérese el siguiente problema 
+\begin_inset Formula 
+\begin{equation}
+\frac{d}{dt}\CORCHETES{\begin{matrix}\VECTOR r\\
+\dot{\VECTOR r}
+\end{matrix}}=\CORCHETES{\begin{matrix}\dot{\VECTOR r}\\
+\frac{\VECTOR F}{m}
+\end{matrix}}\ESPACIOLARGO\equiv\ESPACIOLARGO\frac{d\ARRAY R}{dt}=\ARRAY{\FF}\PARENTESIS{\ARRAY R,t}\label{EQ. RK4 compatible}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\ARRAY R\DEF\CORCHETES{\begin{matrix}\VECTOR r\\
+\dot{\VECTOR r}
+\end{matrix}}$
+\end_inset
+
+ es un 
+\emph on
+array
+\emph default
+ de vectores.
+ El problema así planteado es equivalente a las ecuaciones de Newton 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "EQ. Newtons eqs"
+
+\end_inset
+
+, que se transcriben aquí para más comodidad en la comparación: 
+\begin_inset Formula $\LKEY{\begin{aligned} & \VECTOR r=\VECTOR r\PARENTESIS t\\
+ & \dot{\VECTOR r}\PARENTESIS t=\frac{d\VECTOR r}{dt}\PARENTESIS t\\
+ & \ddot{\VECTOR r}\PARENTESIS t=\frac{\VECTOR F\PARENTESIS{\VECTOR r,t}}{m}
+\end{aligned}
+}$
+\end_inset
+
+.
+ Ahora sí el problema está planteado con el formato necesario para aplicar
+ RK4.
+ 
+\end_layout
+
+\begin_layout Standard
+La discretización de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "EQ. RK4 compatible"
+
+\end_inset
+
+ es 
+\begin_inset Formula 
+\[
+\GRISCLARO{\text{Discretización de }\eqref{EQ. RK4 compatible}\rightarrow}\ARRAY R_{n+1}=\text{algo que depende de }\ARRAY R_{n}
+\]
+
+\end_inset
+
+ y el método RK4 propone que 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\GRISCLARO{\text{RK4}\rightarrow}\ARRAY R_{n+1}=\ARRAY R_{n}+\frac{\Delta_{t}}{6}\PARENTESIS{\ARRAY k_{1}+2\ARRAY k_{2}+2\ARRAY k_{3}+\ARRAY k_{4}}\ESPACIOLARGO\LKEY{\begin{aligned} & \ARRAY k_{1}=\ARRAY{\FF}\PARENTESIS{t_{n},\ARRAY R_{n}}\\
+ & \ARRAY k_{2}=\ARRAY{\FF}\PARENTESIS{t_{n}+\frac{\Delta_{t}}{2},\ARRAY R_{n}+\frac{\Delta_{t}}{2}\ARRAY k_{1}}\\
+ & \ARRAY k_{3}=\ARRAY{\FF}\PARENTESIS{t_{n}+\frac{\Delta_{t}}{2},\ARRAY R_{n}+\frac{\Delta_{t}}{2}\ARRAY k_{2}}\\
+ & \ARRAY k_{4}=\ARRAY{\FF}\PARENTESIS{t_{n}+\Delta_{t},\ARRAY R_{n}+\Delta_{t}\ARRAY k_{3}}
+\end{aligned}
+}\ESPACIOLARGO t_{n}=t_{0}+n\Delta_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el caso particular de las ecuaciones de Newton se tiene que 
+\begin_inset Formula 
+\[
+\ARRAY{\FF}\PARENTESIS{t,\ARRAY R}=\CORCHETES{\begin{matrix}R_{2}\\
+\frac{\VECTOR F\PARENTESIS{t,R_{1}}}{m}
+\end{matrix}}\ESPACIOLARGO\GRISCLARO{\LKEY{\begin{aligned} & R_{1}=\VECTOR r\\
+ & R_{2}=\dot{\VECTOR r}
+\end{aligned}
+}}
+\]
+
+\end_inset
+
+ y 
+\bar under
+si 
+\begin_inset Formula $\VECTOR F\neq\VECTOR F\PARENTESIS t$
+\end_inset
+
+
+\bar default
+ entonces 
+\begin_inset Formula $\ARRAY{\FF}\PARENTESIS{\ARRAY R}=\CORCHETES{\begin{matrix}R_{2}\\
+\frac{1}{m}\VECTOR F\PARENTESIS{R_{1}}
+\end{matrix}}$
+\end_inset
+
+ y el método es 
+\begin_inset Formula 
+\[
+\CORCHETES{\begin{matrix}\VECTOR r_{n+1}\\
+\dot{\VECTOR r}_{n+1}
+\end{matrix}}=\CORCHETES{\begin{matrix}\VECTOR r_{n}\\
+\dot{\VECTOR r}_{n}
+\end{matrix}}+\frac{\Delta_{t}}{6}\PARENTESIS{\ARRAY k_{1}+2\ARRAY k_{2}+2\ARRAY k_{3}+\ARRAY k_{4}}\ESPACIOLARGO\LKEY{\begin{aligned} & \ARRAY k_{1}=\ARRAY{\FF}\PARENTESIS{\ARRAY R_{n}}\\
+ & \ARRAY k_{2}=\ARRAY{\FF}\PARENTESIS{\ARRAY R_{n}+\frac{\Delta_{t}}{2}\ARRAY k_{1}}\\
+ & \ARRAY k_{3}=\ARRAY{\FF}\PARENTESIS{\ARRAY R_{n}+\frac{\Delta_{t}}{2}\ARRAY k_{2}}\\
+ & \ARRAY k_{4}=\ARRAY{\FF}\PARENTESIS{\ARRAY R_{n}+\Delta_{t}\ARRAY k_{3}}
+\end{aligned}
+}
+\]
+
+\end_inset
+
+ Cada uno de los 
+\begin_inset Formula $\ARRAY k$
+\end_inset
+
+ es 
+\begin_inset Formula 
+\begin{eqnarray*}
+\ARRAY k_{1} & = & \ARRAY{\FF}\PARENTESIS{\CORCHETES{\begin{matrix}\VECTOR r_{n}\\
+\dot{\VECTOR r}_{n}
+\end{matrix}}}\\
+ & = & \CORCHETES{\begin{matrix}\dot{\VECTOR r}_{n}\\
+\frac{1}{m}\VECTOR F\PARENTESIS{\VECTOR r_{n}}
+\end{matrix}}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\ARRAY k_{2} & = & \ARRAY{\FF}\PARENTESIS{\ARRAY R_{n}+\frac{\Delta_{t}}{2}\ARRAY k_{1}}\\
+ & = & \ARRAY{\FF}\PARENTESIS{\CORCHETES{\begin{matrix}\VECTOR r_{n}\\
+\dot{\VECTOR r}_{n}
+\end{matrix}}+\frac{\Delta_{t}}{2}\CORCHETES{\begin{matrix}k_{11}\\
+k_{12}
+\end{matrix}}}\\
+ & = & \ARRAY{\FF}\PARENTESIS{\CORCHETES{\begin{matrix}\VECTOR r_{n}+\frac{\Delta_{t}}{2}k_{11}\\
+\dot{\VECTOR r}_{n}+\frac{\Delta_{t}}{2}k_{12}
+\end{matrix}}}\\
+ & = & \CORCHETES{\begin{matrix}\dot{\VECTOR r}_{n}+\frac{\Delta_{t}}{2}k_{12}\\
+\frac{1}{m}\VECTOR F\PARENTESIS{\VECTOR r_{n}+\frac{\Delta_{t}}{2}k_{11}}
+\end{matrix}}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\ARRAY k_{3} & = & \ARRAY{\FF}\PARENTESIS{\ARRAY R_{n}+\frac{\Delta_{t}}{2}\ARRAY k_{2}}\\
+ & = & \ARRAY{\FF}\PARENTESIS{\CORCHETES{\begin{matrix}\VECTOR r_{n}\\
+\dot{\VECTOR r}_{n}
+\end{matrix}}+\frac{\Delta_{t}}{2}\CORCHETES{\begin{matrix}k_{21}\\
+k_{22}
+\end{matrix}}}\\
+ & = & \ARRAY{\FF}\PARENTESIS{\CORCHETES{\begin{matrix}\VECTOR r_{n}+\frac{\Delta_{t}}{2}k_{21}\\
+\dot{\VECTOR r}_{n}+\frac{\Delta_{t}}{2}k_{22}
+\end{matrix}}}\\
+ & = & \CORCHETES{\begin{matrix}\dot{\VECTOR r}_{n}+\frac{\Delta_{t}}{2}k_{22}\\
+\frac{1}{m}\VECTOR F\PARENTESIS{\VECTOR r_{n}+\frac{\Delta_{t}}{2}k_{21}}
+\end{matrix}}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\ARRAY k_{4} & = & \ARRAY{\FF}\PARENTESIS{\ARRAY R_{n}+\Delta_{t}\ARRAY k_{3}}\\
+ & = & \ARRAY{\FF}\PARENTESIS{\CORCHETES{\begin{matrix}\VECTOR r_{n}\\
+\dot{\VECTOR r}_{n}
+\end{matrix}}+\Delta_{t}\CORCHETES{\begin{matrix}k_{31}\\
+k_{32}
+\end{matrix}}}\\
+ & = & \ARRAY{\FF}\PARENTESIS{\CORCHETES{\begin{matrix}\VECTOR r_{n}+\Delta_{t}k_{31}\\
+\dot{\VECTOR r}_{n}+\Delta_{t}k_{32}
+\end{matrix}}}\\
+ & = & \CORCHETES{\begin{matrix}\dot{\VECTOR r}_{n}+\Delta_{t}k_{32}\\
+\frac{1}{m}\VECTOR F\PARENTESIS{\VECTOR r_{n}+\Delta_{t}k_{31}}
+\end{matrix}}
+\end{eqnarray*}
+
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula 
+\[
+\LKEY{\begin{aligned} & \ARRAY k_{1}=\CORCHETES{\begin{matrix}\dot{\VECTOR r}_{n}\\
+\frac{1}{m}\VECTOR F\PARENTESIS{\VECTOR r_{n}}
+\end{matrix}}\\
+ & \ARRAY k_{2}=\CORCHETES{\begin{matrix}\dot{\VECTOR r}_{n}+\frac{\Delta_{t}}{2}k_{12}\\
+\frac{1}{m}\VECTOR F\PARENTESIS{\VECTOR r_{n}+\frac{\Delta_{t}}{2}k_{11}}
+\end{matrix}}\\
+ & \ARRAY k_{3}=\CORCHETES{\begin{matrix}\dot{\VECTOR r}_{n}+\frac{\Delta_{t}}{2}k_{22}\\
+\frac{1}{m}\VECTOR F\PARENTESIS{\VECTOR r_{n}+\frac{\Delta_{t}}{2}k_{21}}
+\end{matrix}}\\
+ & \ARRAY k_{4}=\CORCHETES{\begin{matrix}\dot{\VECTOR r}_{n}+\Delta_{t}k_{32}\\
+\frac{1}{m}\VECTOR F\PARENTESIS{\VECTOR r_{n}+\Delta_{t}k_{31}}
+\end{matrix}}
+\end{aligned}
+}
+\]
+
+\end_inset
+
+ 
+\bar under
+Esto es lo que está implementado en el código
+\bar default
+.
+\end_layout
+
+\end_body
+\end_document

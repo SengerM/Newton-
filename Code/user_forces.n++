@@ -1,0 +1,36 @@
+Force	colission("colission force between projectile and objective", colission_force, 3, false);
+double	repulsion_coef = 2700, // Projectile
+		dissipation_coef = 0, // Projectile
+		colission_radius = 0.8*double(OBJECTIVE_PARTICLES_RADIUS); // Projectile
+colission.AddParameter(&colission_radius);
+colission.AddParameter(&dissipation_coef);
+colission.AddParameter(&repulsion_coef);
+
+Force	damping("damping force of objective particles", damping_force, 1, false);
+double 	damping_coef = 0; // Objective
+damping.AddParameter(&damping_coef);
+
+Force	bonding("bonding force of objective particles", elastic_force, 2, false);
+double 	k = 3000, // Objective
+		l = OBJECTIVE_PARTICLES_RADIUS; // Objective
+bonding.AddParameter(&k);
+bonding.AddParameter(&l);
+
+Force	fixing1("objective fixing force at y = 0", armonic_3D_field, 3, true);
+double	k_fixing = 1e5,
+		l_fixing = 0;
+Vec3D	fixing_point_1(layers[0][0].Position());
+fixing1.AddParameter(&k_fixing);
+fixing1.AddParameter(&l_fixing);
+fixing1.AddParameter(&fixing_point_1);
+
+Force	fixing2("objective fixing force at y = N_PARTICLES", armonic_3D_field, 3, true);
+Vec3D	fixing_point_2(layers[0][N_PARTICLES_PER_LAYER-1].Position());
+fixing2.AddParameter(&k_fixing);
+fixing2.AddParameter(&l_fixing);
+fixing2.AddParameter(&fixing_point_2);
+
+Force	viscous("dissipating force in the fixings of the objective", viscous_field, 1, true);
+double	viscous_fixing_constant = 0;
+viscous.AddParameter(&viscous_fixing_constant);
+

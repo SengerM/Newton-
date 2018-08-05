@@ -1,0 +1,10 @@
+/*
+	IMPORTANT NOTE:
+	* Do not add or remove macros in this file. Just change their actual values but nothing more.
+*/
+#define N_EXPORT_POINTS 2000
+#define SIMULATION_TIME 3
+#define TIME_TO_START_SAVING_DATA 0
+#define TIME_STEP 0.00001
+#define PERCENTAGE_PRINT_STEP 1
+#define RESULTS_DIGITS 3 // Number of digits to be printed in the output file (scientific notation).

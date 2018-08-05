@@ -1,0 +1,5 @@
+int random_uniform(int low, int high) {
+    if (low > high) 
+		return low + (std::rand() % (low - high + 1));
+    return low + (std::rand() % (high - low + 1));
+}

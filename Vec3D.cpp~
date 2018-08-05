@@ -1,0 +1,19 @@
+class Vec3D {
+	private:
+	double x, y, z;
+	
+	public:
+	Vec3D(void);
+	Vec3D(Vec3D);
+	~Vec3D(void);
+}
+
+Vec3D::Vec3D(void) {
+	x = 0;
+	y = 0;
+	z = 0;
+}
+
+Vec3D::Vec3D(Vec3D vec) {
+	
+}

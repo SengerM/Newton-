@@ -1,0 +1,56 @@
+ParticleSystem sys;
+for (j=0; j<N_LAYERS; j++) {
+	for (i=0; i<N_PARTICLES_PER_LAYER; i++) {
+		if (j%2 && i == N_PARTICLES_PER_LAYER-1) // if (j is odd and ...)
+			continue; // Do not add an extra particle at the end of an odd layer
+		sys.AddParticle(layers[j][i]);
+	}
+}
+sys.AddParticle(projectile);
+
+for (j=0; j<N_LAYERS; j++) {
+	for (i=0; i<(layers[j]).size(); i++) {
+		sys.AddInteraction(projectile, (layers[j])[i], colission);
+		sys.AddInteraction((layers[j])[i], projectile, colission);
+		
+		if (i < (layers[j]).size()-1) {
+			sys.AddInteraction(layers[j][i], layers[j][i+1], bonding);
+			sys.AddInteraction(layers[j][i+1], layers[j][i], bonding);
+			sys.AddInteraction(layers[j][i], layers[j][i+1], damping);
+			sys.AddInteraction(layers[j][i+1], layers[j][i], damping);
+		}
+		
+		if (j < N_LAYERS-1) {
+			if (!(j%2)) { // if(j is even)
+				if (i < N_PARTICLES_PER_LAYER-1) {
+					sys.AddInteraction(layers[j][i], layers[j+1][i], bonding);
+					sys.AddInteraction(layers[j+1][i], layers[j][i], bonding);
+					sys.AddInteraction(layers[j][i], layers[j+1][i], damping);
+					sys.AddInteraction(layers[j+1][i], layers[j][i], damping);
+				}
+				if (i > 1) {
+					sys.AddInteraction(layers[j][i], layers[j+1][i-1], bonding);
+					sys.AddInteraction(layers[j+1][i-1], layers[j][i], bonding);
+					sys.AddInteraction(layers[j][i], layers[j+1][i-1], damping);
+					sys.AddInteraction(layers[j+1][i-1], layers[j][i], damping);
+				}
+			} else { // if (j is odd)
+				if (i < N_PARTICLES_PER_LAYER-1) {
+					sys.AddInteraction(layers[j][i], layers[j+1][i], bonding);
+					sys.AddInteraction(layers[j+1][i], layers[j][i], bonding);
+					sys.AddInteraction(layers[j][i], layers[j+1][i], damping);
+					sys.AddInteraction(layers[j+1][i], layers[j][i], damping);
+					
+					sys.AddInteraction(layers[j][i], layers[j+1][i+1], bonding);
+					sys.AddInteraction(layers[j+1][i+1], layers[j][i], bonding);
+					sys.AddInteraction(layers[j][i], layers[j+1][i+1], damping);
+					sys.AddInteraction(layers[j+1][i+1], layers[j][i], damping);
+				}
+			}
+		}
+	}
+}
+sys.AddInteraction(layers[0][0], fixing1);
+sys.AddInteraction(layers[0][0], viscous);
+sys.AddInteraction(layers[0][N_PARTICLES_PER_LAYER-1], fixing2);
+sys.AddInteraction(layers[0][N_PARTICLES_PER_LAYER-1], viscous);
